@@ -1,0 +1,11 @@
+{'ip': '172.16.10.11', 'city': None, 'region': None, 'country': None, 'org': None, 'asn': None}
+{'ip': ' 27.60.167.86', 'city': None, 'region': None, 'country': None, 'org': None, 'asn': None}
+{'ip': '172.16.10.11', 'city': None, 'region': None, 'country': None, 'org': None, 'asn': None}
+{'ip': '27.60.167.86', 'city': 'Coimbatore', 'region': 'Tamil Nadu', 'country': 'India', 'org': 'Bharti Airtel Ltd.', 'asn': 'AS45609 Bharti Airtel Ltd. AS for GPRS Service'}
+{'ip': '87.60.167.86', 'city': 'Ballerup Municipality', 'region': 'Capital Region', 'country': 'Denmark', 'org': 'YouSee A/S', 'asn': 'AS3292 TDC Holding A/S'}
+{'ip': '81.62.163.99', 'city': 'Châtelaine', 'region': 'Geneva', 'country': 'Switzerland', 'org': 'Swisscom (Schweiz) AG', 'asn': 'AS3303 Swisscom (Switzerland) Ltd'}
+2026-03-13 23:34:36.531274 | {'ip': '81.62.163.99', 'city': 'Châtelaine', 'region': 'Geneva', 'country': 'Switzerland', 'org': 'Swisscom (Schweiz) AG', 'asn': 'AS3303 Swisscom (Switzerland) Ltd', 'threat': 'LOW'}
+2026-03-13 23:39:10.937051 | {'ip': '81.62.163.99', 'city': 'Châtelaine', 'region': 'Geneva', 'country': 'Switzerland', 'org': 'Swisscom (Schweiz) AG', 'asn': 'AS3303 Swisscom (Switzerland) Ltd', 'threat': 'LOW'}
+2026-03-13 23:42:43.757907 | {'ip': '81.62.163.99', 'city': 'Châtelaine', 'region': 'Geneva', 'country': 'Switzerland', 'org': 'Swisscom (Schweiz) AG', 'asn': 'AS3303 Swisscom (Switzerland) Ltd', 'threat': 'LOW'}
+2026-03-13 23:44:00.658000 | {'ip': '81.62.163.99', 'city': 'Châtelaine', 'region': 'Geneva', 'country': 'Switzerland', 'org': 'Swisscom (Schweiz) AG', 'asn': 'AS3303 Swisscom (Switzerland) Ltd', 'threat': 'LOW'}
+2026-03-13 23:45:09.536136 | {'ip': '87.60.167.86', 'city': 'Ballerup Municipality', 'region': 'Capital Region', 'country': 'Denmark', 'org': 'YouSee A/S', 'asn': 'AS3292 TDC Holding A/S', 'threat': 'LOW'}

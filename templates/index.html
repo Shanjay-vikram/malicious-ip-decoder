@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Malicious IP Intelligence Analyzer</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+padding-top:80px;
+transition:0.3s;
+}
+
+.dark{
+background:#0f172a;
+color:white;
+}
+
+.light{
+background:#f4f4f4;
+color:black;
+}
+
+.container{
+width:420px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+.dark .container{
+background:#1e293b;
+}
+
+.light .container{
+background:white;
+}
+
+input{
+padding:12px;
+width:80%;
+border:none;
+border-radius:5px;
+margin-top:10px;
+box-shadow:0px 0px 3px gray;
+}
+
+button{
+margin-top:15px;
+padding:10px 25px;
+background:#22c55e;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+.toggle{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.result{
+margin-top:20px;
+text-align:left;
+}
+
+.low{
+color:#22c55e;
+}
+
+.medium{
+color:#facc15;
+}
+
+.high{
+color:#ef4444;
+}
+
+</style>
+
+<script>
+
+function validateIP(){
+
+let ip=document.getElementById("ip").value;
+
+if(ip==""){
+alert("Enter IP Address");
+return false;
+}
+
+return true;
+
+}
+
+function toggleMode(){
+
+let body=document.body;
+
+if(body.classList.contains("dark")){
+body.classList.remove("dark");
+body.classList.add("light");
+}
+else{
+body.classList.remove("light");
+body.classList.add("dark");
+}
+
+}
+
+</script>
+
+</head>
+
+<body class="dark">
+
+<div class="toggle">
+<button onclick="toggleMode()">🌙</button>
+</div>
+
+<div class="container">
+
+<h2>Malicious IP Decoder</h2>
+
+<form method="POST" onsubmit="return validateIP()">
+
+<input type="text" name="ip" id="ip" placeholder="Enter Suspicious IP">
+
+<br>
+
+<button type="submit">Analyze</button>
+
+</form>
+
+{% if result %}
+
+<div class="result">
+
+<h3>IP Intelligence</h3>
+
+<p><b>IP:</b> {{result.ip}}</p>
+<p><b>City:</b> {{result.city}}</p>
+<p><b>Region:</b> {{result.region}}</p>
+<p><b>Country:</b> {{result.country}}</p>
+<p><b>Organization:</b> {{result.org}}</p>
+<p><b>ASN:</b> {{result.asn}}</p>
+
+<p><b>Threat Level:</b>
+
+{% if result.threat == "LOW" %}
+<span class="low">LOW</span>
+{% endif %}
+
+{% if result.threat == "MEDIUM" %}
+<span class="medium">MEDIUM</span>
+{% endif %}
+
+{% if result.threat == "HIGH" %}
+<span class="high">HIGH</span>
+{% endif %}
+
+</p>
+
+<p><b>Risk Score:</b> {{result.risk_score}} / 100</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
